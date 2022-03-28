@@ -2,8 +2,11 @@
 
 > 基于 uni-app，uniCloud，Echarts 的 admin 管理管理后台。 
 
+### 项目截图
+![首页](https://s3.bmp.ovh/imgs/2022/03/30da4b03a6273a4b.png)
+![列表页](https://s3.bmp.ovh/imgs/2022/03/66aa0ee37d988663.png)
 ### 目录结构 
-```javascript
+```javahttps://s3.bmp.ovh/imgs/2022/03/66aa0ee37d988663.pngscript
 ├── cloudfunctions              # 云函数
 ├── common
 │   │── uni.css                 # 公共样式
