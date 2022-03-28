@@ -1,0 +1,31 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"address":{},
+		"bloom":{},
+		"date":{},
+		"latitude":{},
+		"longitude":{},
+		"ly":{},
+		"name":{},
+		"phone":{},
+		"saverName":{},
+		"sept1":{},
+		"sept2":{},
+		"sept3":{},
+		"sept4":{},
+		"status":{},
+		"type":{},
+		"video":{}
+	}
+}

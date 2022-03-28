@@ -1,0 +1,75 @@
+{
+	"bsonType": "object",
+	"permission": {
+		"create": false,
+		"delete": false,
+		"read": true,
+		"update": false
+	},
+	"properties": {
+		"_id": {
+			"description": "存储文档 ID（订单 ID），系统自动生成"
+		},
+		"cancel_date": {
+			"bsonType": "timestamp",
+			"description": "取消时间",
+			"trim": "both"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"discount_cash": {
+			"bsonType": "decimal",
+			"description": "优惠金额",
+			"trim": "both"
+		},
+		"good_id": {
+			"bsonType": "string",
+			"description": "商品id，参考`uni-mall-goods`表",
+			"foreignKey": "opendb-mall-goods._id",
+			"title": "商品id"
+		},
+		"is_promotion": {
+			"bsonType": "int",
+			"description": "提取状态：0为待提取，1为提取",
+			"forceDefaultValue": {
+				"$env": 0
+			},
+			"trim": "both"
+		},
+		"order_guid": {
+			"bsonType": "string",
+			"description": "唯一订单编号",
+			"title": "编号",
+			"trim": "both"
+		},
+		"payment_date": {
+			"bsonType": "timestamp",
+			"description": "支付时间",
+			"trim": "both"
+		},
+		"platform_type": {
+			"bsonType": "int",
+			"description": "平台类型：1为线下，2为O2O，3为B2C",
+			"trim": "both"
+		},
+		"total_cash": {
+			"bsonType": "decimal",
+			"description": "实付金额",
+			"trim": "both"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"defaultValue": {
+				"$env": "uid"
+			},
+			"description": "下单用户ID， 参考`uni-id-users` 表",
+			"foreignKey": "uni-id-users._id"
+		}
+	},
+	"required": ["order_guid", "user_id", "platform_type", "total_cash", "create_date"]
+}
